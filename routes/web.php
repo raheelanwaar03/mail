@@ -22,3 +22,8 @@ Route::get('/', function () {
 // routes for sending mail
 
 Route::post('/sendEmail',[DataController::class ,'getData'])->name('getData');
+
+
+Route::get('/mailView', function () {
+    return new userEmail;
+});

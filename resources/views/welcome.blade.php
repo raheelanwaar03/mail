@@ -4,6 +4,7 @@
 <head>
     <title>Join Spartanburg MAGA</title>
     <title>Join the Spartanburg MAGA Community</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>

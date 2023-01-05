@@ -5,7 +5,6 @@ namespace App\Http\Controllers\email;
 use App\Http\Controllers\Controller;
 use App\Mail\adminEmail;
 use App\Mail\userEmail;
-use App\Mail\userMail;
 use App\Models\email\EmailData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
