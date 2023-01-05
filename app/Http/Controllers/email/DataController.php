@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\email;
 
 use App\Http\Controllers\Controller;
+use App\Mail\userMail;
 use App\Models\email\EmailData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class DataController extends Controller
 {
     public function getData(Request $request)
     {
-
         $emailData = new EmailData();
         $emailData->fName = $request->fName;
         $emailData->lName = $request->lName;
@@ -25,6 +26,7 @@ class DataController extends Controller
         $emailData->zip =  $request->zip;
         $emailData->help = $request->help;
         $emailData->save();
+        Mail::to($emailData->email)->send(new userMail());
         return redirect()->back()->with('massage', 'Your request has been submited');
     }
 }
