@@ -32,6 +32,6 @@ class DataController extends Controller
 
         Mail::to($emailData->email)->send(new userEmail());
         Mail::to($adminEmail)->send(new adminEmail($emailData));
-        return redirect()->back()->with('success', 'Your request has been submited');
+        return redirect()->back()->with('success', 'Congratulations! Now you are member of spartanburgmaga.com request has been submited');
     }
 }

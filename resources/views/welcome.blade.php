@@ -40,7 +40,7 @@
         a county and a state executive committee member for the county.
     </font>
     <BR>
-    <img border="0" src="seal003.png" align="right" width="300" height="300"><br>
+    <img border="0" src="{{ asset('assets/img/seal003.png') }}" align="right" width="300" height="300"><br>
 
 
     <form action="{{ route('getData') }}" method="POST">
