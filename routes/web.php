@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\email\DataController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// routes for sending mail
+
+Route::post('/sendEmail',[DataController::class ,'getData'])->name('getData');
