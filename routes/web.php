@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\email\DataController;
+use App\Mail\userEmail;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 /*
 |--------------------------------------------------------------------------

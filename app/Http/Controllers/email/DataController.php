@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\email;
 
 use App\Http\Controllers\Controller;
+use App\Mail\adminEmail;
+use App\Mail\userEmail;
 use App\Mail\userMail;
 use App\Models\email\EmailData;
 use Illuminate\Http\Request;
@@ -26,7 +28,11 @@ class DataController extends Controller
         $emailData->zip =  $request->zip;
         $emailData->help = $request->help;
         $emailData->save();
-        Mail::to($emailData->email)->send(new userMail());
-        return redirect()->back()->with('massage', 'Your request has been submited');
+
+        $adminEmail = 'billbledsoe@spartanburgmaga.com';
+
+        Mail::to($emailData->email)->send(new userEmail());
+        Mail::to($adminEmail)->send(new adminEmail($emailData));
+        return redirect()->back()->with('success', 'Your request has been submited');
     }
 }
