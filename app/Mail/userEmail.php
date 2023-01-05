@@ -31,7 +31,7 @@ class userEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'User Email',
+            subject: 'Spartanburgmaga.com',
         );
     }
 

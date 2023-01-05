@@ -32,7 +32,7 @@ class adminEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Admin Email',
+            subject: 'Mail from Spartanburgmaga.com',
         );
     }
 
