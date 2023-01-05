@@ -5,11 +5,11 @@
     <title>Join Spartanburg MAGA</title>
     <title>Join the Spartanburg MAGA Community</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+
+    <x-alert />
 
     <font face="Arial" size=6 color="red">
         <center> <strong>Join the Spartanburg MAGA Community </strong>
@@ -99,8 +99,8 @@
     The code must implemented below the tags.
 -->
     {{-- <script type="text/javascript">
-        const form = document.getElementById('my-form');
-        form.addEventListener('submit', sendEmail);
+        const form = document.getElementById('formData');
+        form.addEventListener('submit');
 
         function sendEmail(event) {
             event.preventDefault();
